@@ -4,10 +4,10 @@ node {
       checkout scm
     }
     stage('Build image') {
-      app = docker.build("zaki/openjdk11")
+      app = docker.build("momedalhouma/openjdk11")
     }
     stage('run') {
-       docker.image('zaki/openjdk11').withRun('-p 80:80'){ c ->
+       docker.image('momedalhouma/openjdk11').withRun('-p 80:80'){ c ->
           sh 'docker ps'
        }
     }
