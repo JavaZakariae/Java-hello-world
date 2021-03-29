@@ -7,7 +7,7 @@ RUN apk add openjdk11
 
 # Has to be set explictly to find binaries 
 ENV PATH=$PATH:${JAVA_HOME}/bin
-
+EXPOSE 80
 # https://docs.oracle.com/javase/10/tools/jshell.htm
 # https://en.wikipedia.org/wiki/JShell
 CMD ["jshell"]
